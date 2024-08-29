@@ -6,6 +6,7 @@ namespace pd_recepcion_ufs_2007
         private SerialPort serialPort;
         int nbyte = 0;
         string textoR = "";
+        int byteValue = 0;
         byte[] ack = { 0x06 }; //Caracter ACK
         public Form1()
         {
@@ -38,10 +39,18 @@ namespace pd_recepcion_ufs_2007
             if (e.EventType == SerialData.Chars)
             {
                 // Lee un byte
-                int byteValue = serialPort.ReadByte();
+                byteValue = serialPort.ReadByte();
             }
+            BeginInvoke(new Action(() =>
+            {
+                if (byteValue == 0x05)
+                {
+                    nbyte = -1;
+                    serialPort.Write(ack, 0, ack.Length); // ACK
+                    //textBox8.Text = nENQ.ToString();
+                }
+            }));
         }
-
             private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             serialPort.Close();
