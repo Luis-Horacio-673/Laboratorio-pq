@@ -49,6 +49,172 @@ namespace pd_recepcion_ufs_2007
                     serialPort.Write(ack, 0, ack.Length); // ACK
                     //textBox8.Text = nENQ.ToString();
                 }
+                RX.Text += " " + byteValue.ToString("X"); // Actualizo la muestra del recibido
+                if (nbyte == 0)
+                {
+                    if (byteValue == 2)
+                    {
+                        BCC.Text = "Stx";
+                    }
+                    else { nbyte = -1; }
+                    // textBox1.Text = byteValue.ToString();
+
+                }
+                if (nbyte == 1)
+                {
+                    byteValue = byteValue - 48;
+                    TRIAL.Text = byteValue.ToString();
+                }
+                if (nbyte == 2)
+                {
+                    byteValue = byteValue - 48;
+                    TRIAL.Text += ", " + byteValue.ToString();
+                }
+                if (nbyte == 3)
+                {
+                    byteValue = byteValue - 48;
+                    STATUS.Text = byteValue.ToString();
+                }
+                if (nbyte == 4)
+                {
+                    byteValue = byteValue - 48;
+                    STATUS.Text += ", " + byteValue.ToString();
+                }
+                if (nbyte == 5)
+                {
+                    byteValue = byteValue - 48;
+                    STATUS.Text += ", " + byteValue.ToString();
+                }
+                if (nbyte == 6)
+                {
+                    byteValue = byteValue - 48;
+                    STATUS.Text += ", " + byteValue.ToString();
+                }
+                if (nbyte == 7)         //AMOUNT 01
+                {
+                    byteValue = byteValue - 48;
+                    textoR = byteValue.ToString();
+                }
+                if (nbyte == 8)          //AMOUNT 02
+                {
+                    byteValue = byteValue - 48;
+                    textoR += ", " + byteValue.ToString();
+                }
+                if (nbyte == 9)          //AMOUNT 03
+                {
+                    byteValue = byteValue - 48;
+                    textoR += ", " + byteValue.ToString();
+                }
+                if (nbyte == 10)         //AMOUNT 04
+                {
+                    byteValue = byteValue - 48;
+                    textoR += ", " + byteValue.ToString();
+                }
+                if (nbyte == 11)         //AMOUNT 05
+                {
+                    byteValue = byteValue - 48;
+                    textoR += ", " + byteValue.ToString();
+                }
+                if (nbyte == 12)         //AMOUNT 06
+                {
+                    byteValue = byteValue - 48;
+                    textoR += ", " + byteValue.ToString();
+                }
+                if (nbyte == 13)         //AMOUNT 07
+                {
+                    byteValue = byteValue - 48;
+                    textoR += ", " + byteValue.ToString();
+                }
+                if (nbyte == 14)         //AMOUNT 08
+                {
+                    byteValue = byteValue - 48;
+                    textoR += ", " + byteValue.ToString();
+                }
+                if (nbyte == 15)         //AMOUNT 09
+                {
+                    byteValue = byteValue - 48;
+                    textoR += ", " + byteValue.ToString();
+                }
+                if (nbyte == 16)         //AMOUNT 10
+                {
+                    byteValue = byteValue - 48;
+                    textoR += ", " + byteValue.ToString();
+                }
+                if (nbyte == 17)         //AMOUNT 11
+                {
+                    byteValue = byteValue - 48;
+                    textoR += ", " + byteValue.ToString();
+                }
+                if (nbyte == 18)         //AMOUNT 12
+                {
+                    byteValue = byteValue - 48;
+                    textoR += ", " + byteValue.ToString();
+                }
+                if (nbyte == 19)         //AMOUNT 13
+                {
+                    byteValue = byteValue - 48;
+                    textoR += ", " + byteValue.ToString();
+                }
+                if (nbyte == 20)         //AMOUNT 14
+                {
+                    byteValue = byteValue - 48;
+                    textoR += ", " + byteValue.ToString();
+                    AMOUNT.Text = textoR;
+                    textoR = "";
+                }
+                if (nbyte == 21)         // COUNT 1
+                {
+                    byteValue = byteValue - 48;
+                    textoR = byteValue.ToString();
+                }
+                if (nbyte == 22)         // COUNT 2
+                {
+                    byteValue = byteValue - 48;
+                    textoR += ", " + byteValue.ToString();
+                }
+                if (nbyte == 23)         // COUNT 3
+                {
+                    byteValue = byteValue - 48;
+                    textoR += ", " + byteValue.ToString();
+                }
+                if (nbyte == 24)         // COUNT 4
+                {
+                    byteValue = byteValue - 48;
+                    textoR += ", " + byteValue.ToString();
+                }
+                if (nbyte == 25)         // COUNT 5
+                {
+                    byteValue = byteValue - 48;
+                    textoR += ", " + (byteValue).ToString();
+                }
+                if (nbyte == 26)         // COUNT 6
+                {
+                    byteValue = byteValue - 48;
+                    textoR += ", " + (byteValue).ToString();
+                }
+                if (nbyte == 27)         // COUNT 7
+                {
+                    byteValue = byteValue - 48;
+                    textoR += ", " + (byteValue).ToString();
+                    COUNT.Text = textoR;
+                    textoR = "";
+                    ;
+                }
+                if (nbyte == 28)
+                {
+                    if (byteValue == 0x03)
+                    {
+                        ETX.Text = "ETX";
+                    }
+                }
+                if (nbyte == 29)
+                {
+                    BCC.Text = byteValue.ToString();
+
+                    nbyte = -1;
+
+                }
+                nbyte++;
             }));
         }
             private void Form1_FormClosing(object sender, FormClosingEventArgs e)

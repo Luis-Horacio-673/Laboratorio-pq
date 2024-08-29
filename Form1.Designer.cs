@@ -43,6 +43,8 @@
             label7 = new Label();
             RX = new TextBox();
             button1 = new Button();
+            label8 = new Label();
+            BCC = new TextBox();
             SuspendLayout();
             // 
             // label1
@@ -145,7 +147,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(13, 225);
+            label7.Location = new Point(13, 272);
             label7.Name = "label7";
             label7.Size = new Size(25, 20);
             label7.TabIndex = 12;
@@ -153,25 +155,43 @@
             // 
             // RX
             // 
-            RX.Location = new Point(69, 218);
+            RX.Location = new Point(69, 265);
             RX.Name = "RX";
             RX.Size = new Size(597, 27);
             RX.TabIndex = 13;
             // 
             // button1
             // 
-            button1.Location = new Point(69, 261);
+            button1.Location = new Point(69, 307);
             button1.Name = "button1";
             button1.Size = new Size(94, 29);
             button1.TabIndex = 14;
             button1.Text = "Borrado Rx";
             button1.UseVisualStyleBackColor = true;
             // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(14, 226);
+            label8.Name = "label8";
+            label8.Size = new Size(32, 20);
+            label8.TabIndex = 15;
+            label8.Text = "Bcc";
+            // 
+            // BCC
+            // 
+            BCC.Location = new Point(70, 226);
+            BCC.Name = "BCC";
+            BCC.Size = new Size(125, 27);
+            BCC.TabIndex = 16;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(BCC);
+            Controls.Add(label8);
             Controls.Add(button1);
             Controls.Add(RX);
             Controls.Add(label7);
@@ -203,7 +223,6 @@
         private Label label4;
         private Label label5;
         private Label label6;
-        private TextBox textBox1;
         private TextBox textBox2;
         private TextBox textBox3;
         private TextBox textBox4;
@@ -216,5 +235,7 @@
         private Label label7;
         private TextBox RX;
         private Button button1;
+        private Label label8;
+        private TextBox BCC;
     }
 }
