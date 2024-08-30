@@ -8,8 +8,8 @@ namespace pd_recepcion_ufs_2007
         string textoR = "";
         int byteValue = 0;
         byte[] ack = { 0x06 }; //Caracter ACK
-        byte[] nack= { 0x15 }; //Caracter NACK
-        byte nToNack =0;
+        byte[] nack = { 0x15 }; //Caracter NACK
+        byte nToNack = 0;
         public Form1()
         {
             InitializeComponent();
@@ -51,7 +51,7 @@ namespace pd_recepcion_ufs_2007
                     serialPort.Write(ack, 0, ack.Length); // ACK
                     //textBox8.Text = nENQ.ToString();
                 }
-                
+
                 {
                     if (byteValue == 2)
                     {
@@ -95,71 +95,85 @@ namespace pd_recepcion_ufs_2007
                 {
                     byteValue = byteValue - 48;
                     textoR = byteValue.ToString();
+                    DB.Text = byteValue.ToString();
                 }
                 if (nbyte == 8)          //AMOUNT 02
                 {
                     byteValue = byteValue - 48;
                     textoR += ", " + byteValue.ToString();
+                    UB.Text = byteValue.ToString();
                 }
                 if (nbyte == 9)          //AMOUNT 03
                 {
                     byteValue = byteValue - 48;
                     textoR += ", " + byteValue.ToString();
+                    CMM.Text = byteValue.ToString();
                 }
                 if (nbyte == 10)         //AMOUNT 04
                 {
                     byteValue = byteValue - 48;
                     textoR += ", " + byteValue.ToString();
+                    DMM.Text = byteValue.ToString();
                 }
                 if (nbyte == 11)         //AMOUNT 05
                 {
                     byteValue = byteValue - 48;
                     textoR += ", " + byteValue.ToString();
+                    UMM.Text = byteValue.ToString();
                 }
                 if (nbyte == 12)         //AMOUNT 06
                 {
                     byteValue = byteValue - 48;
                     textoR += ", " + byteValue.ToString();
+                    CM.Text = byteValue.ToString();
                 }
                 if (nbyte == 13)         //AMOUNT 07
                 {
                     byteValue = byteValue - 48;
                     textoR += ", " + byteValue.ToString();
+                    DM.Text = byteValue.ToString();
                 }
                 if (nbyte == 14)         //AMOUNT 08
                 {
                     byteValue = byteValue - 48;
                     textoR += ", " + byteValue.ToString();
+                    UM.Text = byteValue.ToString();
                 }
                 if (nbyte == 15)         //AMOUNT 09
                 {
                     byteValue = byteValue - 48;
                     textoR += ", " + byteValue.ToString();
+                    CMIL.Text = byteValue.ToString();
                 }
                 if (nbyte == 16)         //AMOUNT 10
                 {
                     byteValue = byteValue - 48;
                     textoR += ", " + byteValue.ToString();
+                    DMIL.Text = byteValue.ToString();
                 }
                 if (nbyte == 17)         //AMOUNT 11
                 {
                     byteValue = byteValue - 48;
                     textoR += ", " + byteValue.ToString();
+                    UMIL.Text = byteValue.ToString();
                 }
                 if (nbyte == 18)         //AMOUNT 12
                 {
                     byteValue = byteValue - 48;
                     textoR += ", " + byteValue.ToString();
+                    CEN.Text = byteValue.ToString();
                 }
                 if (nbyte == 19)         //AMOUNT 13
                 {
                     byteValue = byteValue - 48;
                     textoR += ", " + byteValue.ToString();
+                    DEC.Text = byteValue.ToString();
                 }
                 if (nbyte == 20)         //AMOUNT 14
                 {
                     byteValue = byteValue - 48;
                     textoR += ", " + byteValue.ToString();
+                    UNI.Text = byteValue.ToString();
                     AMOUNT.Text = textoR;
                     textoR = "";
                 }
@@ -227,9 +241,11 @@ namespace pd_recepcion_ufs_2007
                 nbyte++;
             }));
         }
-            private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             serialPort.Close();
         }
+
+        
     }
 }

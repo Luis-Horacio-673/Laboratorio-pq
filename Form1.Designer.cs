@@ -42,6 +42,34 @@
             ETX = new TextBox();
             label8 = new Label();
             BCC = new TextBox();
+            U = new Label();
+            DB = new TextBox();
+            UB = new TextBox();
+            CMM = new TextBox();
+            DMM = new TextBox();
+            UMM = new TextBox();
+            CM = new TextBox();
+            DM = new TextBox();
+            UM = new TextBox();
+            CMIL = new TextBox();
+            DMIL = new TextBox();
+            UMIL = new TextBox();
+            CEN = new TextBox();
+            DEC = new TextBox();
+            UNI = new TextBox();
+            D = new Label();
+            label7 = new Label();
+            label9 = new Label();
+            label10 = new Label();
+            label11 = new Label();
+            label12 = new Label();
+            label13 = new Label();
+            M = new Label();
+            label14 = new Label();
+            label15 = new Label();
+            label16 = new Label();
+            label17 = new Label();
+            label18 = new Label();
             SuspendLayout();
             // 
             // label1
@@ -157,11 +185,263 @@
             BCC.Size = new Size(125, 27);
             BCC.TabIndex = 16;
             // 
+            // U
+            // 
+            U.AutoSize = true;
+            U.Location = new Point(623, 275);
+            U.Name = "U";
+            U.Size = new Size(31, 20);
+            U.TabIndex = 17;
+            U.Text = "Uni";
+            // 
+            // DB
+            // 
+            DB.Location = new Point(27, 298);
+            DB.Name = "DB";
+            DB.Size = new Size(30, 27);
+            DB.TabIndex = 18;
+            // 
+            // UB
+            // 
+            UB.Location = new Point(70, 298);
+            UB.Name = "UB";
+            UB.Size = new Size(30, 27);
+            UB.TabIndex = 19;
+            // 
+            // CMM
+            // 
+            CMM.Location = new Point(115, 298);
+            CMM.Name = "CMM";
+            CMM.Size = new Size(30, 27);
+            CMM.TabIndex = 20;
+            // 
+            // DMM
+            // 
+            DMM.Location = new Point(165, 298);
+            DMM.Name = "DMM";
+            DMM.Size = new Size(30, 27);
+            DMM.TabIndex = 21;
+            // 
+            // UMM
+            // 
+            UMM.Location = new Point(210, 298);
+            UMM.Name = "UMM";
+            UMM.Size = new Size(30, 27);
+            UMM.TabIndex = 22;
+            // 
+            // CM
+            // 
+            CM.Location = new Point(252, 298);
+            CM.Name = "CM";
+            CM.Size = new Size(30, 27);
+            CM.TabIndex = 23;
+            // 
+            // DM
+            // 
+            DM.Location = new Point(300, 298);
+            DM.Name = "DM";
+            DM.Size = new Size(30, 27);
+            DM.TabIndex = 24;
+            // 
+            // UM
+            // 
+            UM.Location = new Point(345, 298);
+            UM.Name = "UM";
+            UM.Size = new Size(30, 27);
+            UM.TabIndex = 25;
+            // 
+            // CMIL
+            // 
+            CMIL.Location = new Point(392, 298);
+            CMIL.Name = "CMIL";
+            CMIL.Size = new Size(30, 27);
+            CMIL.TabIndex = 26;
+            // 
+            // DMIL
+            // 
+            DMIL.Location = new Point(439, 298);
+            DMIL.Name = "DMIL";
+            DMIL.Size = new Size(30, 27);
+            DMIL.TabIndex = 27;
+            // 
+            // UMIL
+            // 
+            UMIL.Location = new Point(486, 298);
+            UMIL.Name = "UMIL";
+            UMIL.Size = new Size(30, 27);
+            UMIL.TabIndex = 28;
+            // 
+            // CEN
+            // 
+            CEN.Location = new Point(531, 298);
+            CEN.Name = "CEN";
+            CEN.Size = new Size(30, 27);
+            CEN.TabIndex = 29;
+            // 
+            // DEC
+            // 
+            DEC.Location = new Point(577, 298);
+            DEC.Name = "DEC";
+            DEC.Size = new Size(30, 27);
+            DEC.TabIndex = 30;
+            // 
+            // UNI
+            // 
+            UNI.Location = new Point(623, 298);
+            UNI.Name = "UNI";
+            UNI.Size = new Size(30, 27);
+            UNI.TabIndex = 31;
+            // 
+            // D
+            // 
+            D.AutoSize = true;
+            D.Location = new Point(577, 275);
+            D.Name = "D";
+            D.Size = new Size(35, 20);
+            D.TabIndex = 32;
+            D.Text = "Dec";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(527, 275);
+            label7.Name = "label7";
+            label7.Size = new Size(34, 20);
+            label7.TabIndex = 33;
+            label7.Text = "Cen";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(481, 262);
+            label9.Name = "label9";
+            label9.Size = new Size(40, 20);
+            label9.TabIndex = 34;
+            label9.Text = "Umil";
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new Point(439, 262);
+            label10.Name = "label10";
+            label10.Size = new Size(41, 20);
+            label10.TabIndex = 35;
+            label10.Text = "Dmil";
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Location = new Point(383, 262);
+            label11.Name = "label11";
+            label11.Size = new Size(39, 20);
+            label11.TabIndex = 36;
+            label11.Text = "Cmil";
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Location = new Point(336, 275);
+            label12.Name = "label12";
+            label12.Size = new Size(32, 20);
+            label12.TabIndex = 37;
+            label12.Text = "Um";
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Location = new Point(297, 275);
+            label13.Name = "label13";
+            label13.Size = new Size(33, 20);
+            label13.TabIndex = 38;
+            label13.Text = "Dm";
+            // 
+            // M
+            // 
+            M.AutoSize = true;
+            M.Location = new Point(252, 275);
+            M.Name = "M";
+            M.Size = new Size(31, 20);
+            M.TabIndex = 39;
+            M.Text = "Cm";
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.Location = new Point(200, 262);
+            label14.Name = "label14";
+            label14.Size = new Size(45, 20);
+            label14.TabIndex = 40;
+            label14.Text = "Umm";
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.Location = new Point(149, 262);
+            label15.Name = "label15";
+            label15.Size = new Size(46, 20);
+            label15.TabIndex = 41;
+            label15.Text = "Dmm";
+            // 
+            // label16
+            // 
+            label16.AutoSize = true;
+            label16.Location = new Point(101, 262);
+            label16.Name = "label16";
+            label16.Size = new Size(44, 20);
+            label16.TabIndex = 42;
+            label16.Text = "Cmm";
+            // 
+            // label17
+            // 
+            label17.AutoSize = true;
+            label17.Location = new Point(70, 275);
+            label17.Name = "label17";
+            label17.Size = new Size(28, 20);
+            label17.TabIndex = 43;
+            label17.Text = "Ub";
+            // 
+            // label18
+            // 
+            label18.AutoSize = true;
+            label18.Location = new Point(28, 275);
+            label18.Name = "label18";
+            label18.Size = new Size(29, 20);
+            label18.TabIndex = 44;
+            label18.Text = "Db";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label18);
+            Controls.Add(label17);
+            Controls.Add(label16);
+            Controls.Add(label15);
+            Controls.Add(label14);
+            Controls.Add(M);
+            Controls.Add(label13);
+            Controls.Add(label12);
+            Controls.Add(label11);
+            Controls.Add(label10);
+            Controls.Add(label9);
+            Controls.Add(label7);
+            Controls.Add(D);
+            Controls.Add(UNI);
+            Controls.Add(DEC);
+            Controls.Add(CEN);
+            Controls.Add(UMIL);
+            Controls.Add(DMIL);
+            Controls.Add(CMIL);
+            Controls.Add(UM);
+            Controls.Add(DM);
+            Controls.Add(CM);
+            Controls.Add(UMM);
+            Controls.Add(DMM);
+            Controls.Add(CMM);
+            Controls.Add(UB);
+            Controls.Add(DB);
+            Controls.Add(U);
             Controls.Add(BCC);
             Controls.Add(label8);
             Controls.Add(ETX);
@@ -192,10 +472,10 @@
         private Label label4;
         private Label label5;
         private Label label6;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private TextBox textBox5;
+        private TextBox UB;
+        private TextBox CMM;
+        private TextBox DMM;
+        private TextBox UMM;
         private TextBox TRIAL;
         private TextBox STATUS;
         private TextBox AMOUNT;
@@ -203,5 +483,29 @@
         private TextBox ETX;
         private Label label8;
         private TextBox BCC;
+        private Label U;
+        private TextBox DB;
+        private TextBox CM;
+        private TextBox DM;
+        private TextBox UM;
+        private TextBox CMIL;
+        private TextBox DMIL;
+        private TextBox UMIL;
+        private TextBox CEN;
+        private TextBox DEC;
+        private TextBox UNI;
+        private Label D;
+        private Label label7;
+        private Label label9;
+        private Label label10;
+        private Label label11;
+        private Label label12;
+        private Label label13;
+        private Label M;
+        private Label label14;
+        private Label label15;
+        private Label label16;
+        private Label label17;
+        private Label label18;
     }
 }
