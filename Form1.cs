@@ -8,6 +8,8 @@ namespace pd_recepcion_ufs_2007
         string textoR = "";
         int byteValue = 0;
         byte[] ack = { 0x06 }; //Caracter ACK
+        byte[] nack= { 0x15 }; //Caracter NACK
+        byte nToNack =0;
         public Form1()
         {
             InitializeComponent();
@@ -212,7 +214,16 @@ namespace pd_recepcion_ufs_2007
                     BCC.Text = byteValue.ToString();
 
                     nbyte = -1;
-
+                    nToNack++;
+                    if (nToNack == 3)
+                    {
+                        serialPort.Write(nack, 0, ack.Length); // NACK
+                        nToNack = 0;                                     // 
+                    }
+                    else
+                    {
+                        serialPort.Write(ack, 0, ack.Length); // ACK }
+                    }
                 }
                 nbyte++;
             }));
