@@ -51,8 +51,7 @@ namespace pd_recepcion_ufs_2007
                     serialPort.Write(ack, 0, ack.Length); // ACK
                     //textBox8.Text = nENQ.ToString();
                 }
-                RX.Text += " " + byteValue.ToString("X"); // Actualizo la muestra del recibido
-                if (nbyte == 0)
+                
                 {
                     if (byteValue == 2)
                     {

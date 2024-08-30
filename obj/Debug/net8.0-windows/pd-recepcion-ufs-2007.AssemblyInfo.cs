@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("pd-recepcion-ufs-2007")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7efa54b0b04dac88d8ed7e28d064bdb89c36e3fd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+86d35bf280ff9abe67d73bac62c1709b80ead2c8")]
 [assembly: System.Reflection.AssemblyProductAttribute("pd-recepcion-ufs-2007")]
 [assembly: System.Reflection.AssemblyTitleAttribute("pd-recepcion-ufs-2007")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

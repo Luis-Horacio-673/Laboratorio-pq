@@ -40,9 +40,6 @@
             AMOUNT = new TextBox();
             COUNT = new TextBox();
             ETX = new TextBox();
-            label7 = new Label();
-            RX = new TextBox();
-            button1 = new Button();
             label8 = new Label();
             BCC = new TextBox();
             SuspendLayout();
@@ -144,31 +141,6 @@
             ETX.Size = new Size(125, 27);
             ETX.TabIndex = 11;
             // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Location = new Point(13, 272);
-            label7.Name = "label7";
-            label7.Size = new Size(25, 20);
-            label7.TabIndex = 12;
-            label7.Text = "Rx";
-            // 
-            // RX
-            // 
-            RX.Location = new Point(69, 265);
-            RX.Name = "RX";
-            RX.Size = new Size(597, 27);
-            RX.TabIndex = 13;
-            // 
-            // button1
-            // 
-            button1.Location = new Point(69, 307);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 14;
-            button1.Text = "Borrado Rx";
-            button1.UseVisualStyleBackColor = true;
-            // 
             // label8
             // 
             label8.AutoSize = true;
@@ -192,9 +164,6 @@
             ClientSize = new Size(800, 450);
             Controls.Add(BCC);
             Controls.Add(label8);
-            Controls.Add(button1);
-            Controls.Add(RX);
-            Controls.Add(label7);
             Controls.Add(ETX);
             Controls.Add(COUNT);
             Controls.Add(AMOUNT);
@@ -232,9 +201,6 @@
         private TextBox AMOUNT;
         private TextBox COUNT;
         private TextBox ETX;
-        private Label label7;
-        private TextBox RX;
-        private Button button1;
         private Label label8;
         private TextBox BCC;
     }
