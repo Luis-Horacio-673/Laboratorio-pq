@@ -70,6 +70,20 @@
             label16 = new Label();
             label17 = new Label();
             label18 = new Label();
+            label19 = new Label();
+            CUNI = new TextBox();
+            CDEC = new TextBox();
+            CCEN = new TextBox();
+            CUMIL = new TextBox();
+            CDMIL = new TextBox();
+            CCMIL = new TextBox();
+            CUM = new TextBox();
+            label20 = new Label();
+            label21 = new Label();
+            label22 = new Label();
+            label23 = new Label();
+            label24 = new Label();
+            label25 = new Label();
             SuspendLayout();
             // 
             // label1
@@ -409,11 +423,137 @@
             label18.TabIndex = 44;
             label18.Text = "Db";
             // 
+            // label19
+            // 
+            label19.AutoSize = true;
+            label19.Location = new Point(623, 352);
+            label19.Name = "label19";
+            label19.Size = new Size(38, 20);
+            label19.TabIndex = 45;
+            label19.Text = "Cuni";
+            // 
+            // CUNI
+            // 
+            CUNI.Location = new Point(627, 385);
+            CUNI.Name = "CUNI";
+            CUNI.Size = new Size(27, 27);
+            CUNI.TabIndex = 46;
+            // 
+            // CDEC
+            // 
+            CDEC.Location = new Point(556, 385);
+            CDEC.Name = "CDEC";
+            CDEC.Size = new Size(27, 27);
+            CDEC.TabIndex = 47;
+            // 
+            // CCEN
+            // 
+            CCEN.Location = new Point(486, 385);
+            CCEN.Name = "CCEN";
+            CCEN.Size = new Size(27, 27);
+            CCEN.TabIndex = 48;
+            // 
+            // CUMIL
+            // 
+            CUMIL.Location = new Point(422, 385);
+            CUMIL.Name = "CUMIL";
+            CUMIL.Size = new Size(27, 27);
+            CUMIL.TabIndex = 49;
+            // 
+            // CDMIL
+            // 
+            CDMIL.Location = new Point(366, 385);
+            CDMIL.Name = "CDMIL";
+            CDMIL.Size = new Size(27, 27);
+            CDMIL.TabIndex = 50;
+            // 
+            // CCMIL
+            // 
+            CCMIL.Location = new Point(303, 385);
+            CCMIL.Name = "CCMIL";
+            CCMIL.Size = new Size(27, 27);
+            CCMIL.TabIndex = 51;
+            // 
+            // CUM
+            // 
+            CUM.Location = new Point(234, 385);
+            CUM.Name = "CUM";
+            CUM.Size = new Size(27, 27);
+            CUM.TabIndex = 52;
+            // 
+            // label20
+            // 
+            label20.AutoSize = true;
+            label20.Location = new Point(556, 352);
+            label20.Name = "label20";
+            label20.Size = new Size(42, 20);
+            label20.TabIndex = 53;
+            label20.Text = "Cdec";
+            // 
+            // label21
+            // 
+            label21.AutoSize = true;
+            label21.Location = new Point(480, 356);
+            label21.Name = "label21";
+            label21.Size = new Size(41, 20);
+            label21.TabIndex = 54;
+            label21.Text = "Ccen";
+            // 
+            // label22
+            // 
+            label22.AutoSize = true;
+            label22.Location = new Point(420, 354);
+            label22.Name = "label22";
+            label22.Size = new Size(47, 20);
+            label22.TabIndex = 55;
+            label22.Text = "Cumil";
+            // 
+            // label23
+            // 
+            label23.AutoSize = true;
+            label23.Location = new Point(366, 356);
+            label23.Name = "label23";
+            label23.Size = new Size(48, 20);
+            label23.TabIndex = 56;
+            label23.Text = "Cdmil";
+            // 
+            // label24
+            // 
+            label24.AutoSize = true;
+            label24.Location = new Point(300, 356);
+            label24.Name = "label24";
+            label24.Size = new Size(46, 20);
+            label24.TabIndex = 57;
+            label24.Text = "Ccmil";
+            // 
+            // label25
+            // 
+            label25.AutoSize = true;
+            label25.Location = new Point(234, 356);
+            label25.Name = "label25";
+            label25.Size = new Size(39, 20);
+            label25.TabIndex = 58;
+            label25.Text = "Cum";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label25);
+            Controls.Add(label24);
+            Controls.Add(label23);
+            Controls.Add(label22);
+            Controls.Add(label21);
+            Controls.Add(label20);
+            Controls.Add(CUM);
+            Controls.Add(CCMIL);
+            Controls.Add(CDMIL);
+            Controls.Add(CUMIL);
+            Controls.Add(CCEN);
+            Controls.Add(CDEC);
+            Controls.Add(CUNI);
+            Controls.Add(label19);
             Controls.Add(label18);
             Controls.Add(label17);
             Controls.Add(label16);
@@ -507,5 +647,19 @@
         private Label label16;
         private Label label17;
         private Label label18;
+        private Label label19;
+        private TextBox CUNI;
+        private TextBox CDEC;
+        private TextBox CCEN;
+        private TextBox CUMIL;
+        private TextBox CDMIL;
+        private TextBox CCMIL;
+        private TextBox CUM;
+        private Label label20;
+        private Label label21;
+        private Label label22;
+        private Label label23;
+        private Label label24;
+        private Label label25;
     }
 }
