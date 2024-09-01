@@ -142,7 +142,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(9, 181);
+            label6.Location = new Point(14, 192);
             label6.Name = "label6";
             label6.Size = new Size(29, 20);
             label6.TabIndex = 6;
@@ -157,28 +157,32 @@
             // 
             // STATUS
             // 
-            STATUS.Location = new Point(70, 75);
+            STATUS.Location = new Point(70, 70);
             STATUS.Name = "STATUS";
-            STATUS.Size = new Size(125, 27);
+            STATUS.Size = new Size(136, 27);
             STATUS.TabIndex = 8;
             // 
             // AMOUNT
             // 
+            AMOUNT.Font = new Font("Segoe UI", 12F);
+            AMOUNT.ForeColor = Color.Red;
             AMOUNT.Location = new Point(70, 105);
             AMOUNT.Name = "AMOUNT";
-            AMOUNT.Size = new Size(212, 27);
+            AMOUNT.Size = new Size(212, 34);
             AMOUNT.TabIndex = 9;
             // 
             // COUNT
             // 
+            COUNT.Font = new Font("Segoe UI", 12F);
+            COUNT.ForeColor = Color.RoyalBlue;
             COUNT.Location = new Point(70, 145);
             COUNT.Name = "COUNT";
-            COUNT.Size = new Size(212, 27);
+            COUNT.Size = new Size(212, 34);
             COUNT.TabIndex = 10;
             // 
             // ETX
             // 
-            ETX.Location = new Point(70, 178);
+            ETX.Location = new Point(70, 185);
             ETX.Name = "ETX";
             ETX.Size = new Size(125, 27);
             ETX.TabIndex = 11;
@@ -462,14 +466,14 @@
             // 
             // CDMIL
             // 
-            CDMIL.Location = new Point(366, 385);
+            CDMIL.Location = new Point(348, 385);
             CDMIL.Name = "CDMIL";
             CDMIL.Size = new Size(27, 27);
             CDMIL.TabIndex = 50;
             // 
             // CCMIL
             // 
-            CCMIL.Location = new Point(303, 385);
+            CCMIL.Location = new Point(297, 385);
             CCMIL.Name = "CCMIL";
             CCMIL.Size = new Size(27, 27);
             CCMIL.TabIndex = 51;

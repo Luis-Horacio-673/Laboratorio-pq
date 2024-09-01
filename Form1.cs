@@ -239,7 +239,6 @@ namespace pd_recepcion_ufs_2007
                     sPiezasnew += byteValue.ToString();
                     COUNT.Text = textoR;
                     textoR = "";
-                    ;
                 }
                 if (nbyte == 28)                //ETX
                 {
