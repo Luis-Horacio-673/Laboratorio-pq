@@ -53,22 +53,25 @@ namespace pd_recepcion_ufs_2007
             }
             BeginInvoke(new Action(() =>
             {
-                if (byteValue == 0x05)
+                if (nbyte == 0) 
                 {
+                
+                    if (byteValue == 0x05)
+                    {
                     nbyte = -1;
                     serialPort.Write(ack, 0, ack.Length); // ACK
                     //textBox8.Text = nENQ.ToString();
-                }
+                    }
 
-                {
+                
                     if (byteValue == 2)
                     {
-                        BCC.Text = "Stx";
+                        STX.Text = "Stx";
                     }
                     else { nbyte = -1; }
-                    // textBox1.Text = byteValue.ToString();
+                }   
 
-                }
+                
                 if (nbyte == 1)
                 {
                     byteValue = byteValue - 48;
