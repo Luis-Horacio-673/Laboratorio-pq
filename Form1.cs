@@ -10,6 +10,14 @@ namespace pd_recepcion_ufs_2007
         byte[] ack = { 0x06 }; //Caracter ACK
         byte[] nack = { 0x15 }; //Caracter NACK
         byte nToNack = 0;
+        int Millos =0;
+        string sMillosold = "";
+        string sMillosnew = "";
+        int Piezas = 0;
+        string sPiezasold = "";
+        string sPiezasnew = "";
+        bool cienMillos = false;
+
         public Form1()
         {
             InitializeComponent();
@@ -107,7 +115,7 @@ namespace pd_recepcion_ufs_2007
                 {
                     byteValue = byteValue - 48;
                     textoR += ", " + byteValue.ToString();
-                    CMM.Text = byteValue.ToString();
+                    CMM.Text = byteValue.ToString(); 
                 }
                 if (nbyte == 10)         //AMOUNT 04
                 {
@@ -126,18 +134,21 @@ namespace pd_recepcion_ufs_2007
                     byteValue = byteValue - 48;
                     textoR += ", " + byteValue.ToString();
                     CM.Text = byteValue.ToString();
+                    sMillosnew = byteValue.ToString();
                 }
                 if (nbyte == 13)         //AMOUNT 07
                 {
                     byteValue = byteValue - 48;
                     textoR += ", " + byteValue.ToString();
                     DM.Text = byteValue.ToString();
+                    sMillosnew += byteValue.ToString();
                 }
                 if (nbyte == 14)         //AMOUNT 08
                 {
                     byteValue = byteValue - 48;
                     textoR += ", " + byteValue.ToString();
                     UM.Text = byteValue.ToString();
+                    sMillosnew += byteValue.ToString();
                 }
                 if (nbyte == 15)         //AMOUNT 09
                 {
@@ -196,21 +207,25 @@ namespace pd_recepcion_ufs_2007
                 {
                     byteValue = byteValue - 48;
                     textoR += ", " + byteValue.ToString();
+                    sPiezasnew = byteValue.ToString();
                 }
-                if (nbyte == 25)         // COUNT 5
+                    if (nbyte == 25)         // COUNT 5
                 {
                     byteValue = byteValue - 48;
                     textoR += ", " + (byteValue).ToString();
+                    sPiezasnew += byteValue.ToString();
                 }
                 if (nbyte == 26)         // COUNT 6
                 {
                     byteValue = byteValue - 48;
                     textoR += ", " + (byteValue).ToString();
+                    sPiezasnew += byteValue.ToString();
                 }
                 if (nbyte == 27)         // COUNT 7
                 {
                     byteValue = byteValue - 48;
                     textoR += ", " + (byteValue).ToString();
+                    sPiezasnew += byteValue.ToString();
                     COUNT.Text = textoR;
                     textoR = "";
                     ;
