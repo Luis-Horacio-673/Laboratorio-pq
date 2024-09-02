@@ -18,6 +18,7 @@ namespace pd_recepcion_ufs_2007
         string sMillosold = "";
         string sMillosnew = "";
         int Piezas = 0;
+        int Piezas_old = 0;
         string sPiezasold = "";
         string sPiezasnew = "";
         bool cienMillos = false;
@@ -144,14 +145,13 @@ namespace pd_recepcion_ufs_2007
                     byteValue = byteValue - 48;
                     textoR += ", " + byteValue.ToString();
                     CM.Text = byteValue.ToString();
-                    sMillosnew = byteValue.ToString();
                 }
                 if (nbyte == 13)                //AMOUNT 07
                 {
                     byteValue = byteValue - 48;
                     textoR += ", " + byteValue.ToString();
                     DM.Text = byteValue.ToString();
-                    sMillosnew += byteValue.ToString();
+                    sMillosnew = byteValue.ToString();
                 }
                 if (nbyte == 14)                //AMOUNT 08
                 {
@@ -272,8 +272,7 @@ namespace pd_recepcion_ufs_2007
                     // --------------------Determinacion del paso 99 a 100 millos
                     int.TryParse(sMillosnew, out Millos);
                     int.TryParse(sMillosold, out Millos_old);
-                    Millos = Millos - Millos_old;
-                    if(((Millos - Millos_old)<0) && contando && (Millos == 99)) {
+                    if((Millos - Millos_old)<0 && contando && (Millos == 99)) {
                         cienMillos=true;
                         value_Millos++;
                         textoR = "00000";
@@ -281,7 +280,21 @@ namespace pd_recepcion_ufs_2007
                         CEN.Text + DEC.Text + UNI.Text;
                         AMOUNT.Text = textoR;
                     }
+                    sMillosold = sMillosnew;
                     // --------------------
+
+                    //-------------Actualizacion de COUNT en decenas de miles
+                    int.TryParse(sPiezasnew, out Piezas);
+                    int.TryParse(sPiezasold, out Piezas_old);
+                    if (((Piezas - Piezas_old) < 0) && contando && (Piezas_old == 9999))
+                    {
+                        value_Miles++;
+                        textoR = "000" + value_Miles.ToString() + CUMIL.Text + CCEN.Text + 
+                        CDEC.Text + CUNI.Text;
+                        COUNT.Text = textoR;
+                    }
+                    sPiezasold = sPiezasnew;
+                    // --------------------------------------------------
                 }
                 nbyte++;
             }));
