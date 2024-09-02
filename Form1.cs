@@ -1,4 +1,5 @@
 using System.IO.Ports;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 namespace pd_recepcion_ufs_2007
 {
     public partial class Form1 : Form
@@ -11,12 +12,14 @@ namespace pd_recepcion_ufs_2007
         byte[] nack = { 0x15 }; //Caracter NACK
         byte nToNack = 0;
         int Millos = 0;
+        int Millos_old = 0;
         string sMillosold = "";
         string sMillosnew = "";
         int Piezas = 0;
         string sPiezasold = "";
         string sPiezasnew = "";
         bool cienMillos = false;
+        bool contando = false;
 
         public Form1()
         {
@@ -86,6 +89,8 @@ namespace pd_recepcion_ufs_2007
                 {
                     byteValue = byteValue - 48;
                     STATUS.Text = byteValue.ToString();
+                    if (byteValue == 0x01) { contando = true; }
+                    if (byteValue == 0x00) { contando = false; }
                 }
                 if (nbyte == 4)                 //STATUS 2
                 {
@@ -262,6 +267,12 @@ namespace pd_recepcion_ufs_2007
                     {
                         serialPort.Write(ack, 0, ack.Length); // ACK }
                     }
+                    // --------------------Determinacion del paso 99 a 100 millos
+                    int.TryParse(sMillosnew, out Millos);
+                    int.TryParse(sMillosold, out Millos_old);
+                    Millos = Millos - Millos_old;
+                    if(((Millos - Millos_old)<0) && contando && (Millos == 99)) { cienMillos=true; }
+                    // --------------------
                 }
                 nbyte++;
             }));
