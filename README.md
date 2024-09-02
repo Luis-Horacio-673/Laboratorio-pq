@@ -40,3 +40,5 @@ Se comienza a indicar los pasos realizados en el software, indicando los pasos q
 - Se verifica el caso de (nbyte == 25). Se agrega el quinto byte de Count al texBox CCEN  (Centenas)
 - Se verifica el caso de (nbyte == 26). Se agrega el sexto byte de Count al texBox CDEC  (Decenas)
 - Se verifica el caso de (nbyte == 27). Se agrega el septimo byte de Count al texBox CUNI  (Unidades)
+
+Para llevar la cuenta de los millones se guarda en una variable la cuenta de centenas de millon, se hace nToNack=-30

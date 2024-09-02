@@ -12,6 +12,8 @@ namespace pd_recepcion_ufs_2007
         byte[] nack = { 0x15 }; //Caracter NACK
         byte nToNack = 0;
         int Millos = 0;
+        int value_Millos = 0;
+        int value_Miles = 0;
         int Millos_old = 0;
         string sMillosold = "";
         string sMillosnew = "";
@@ -271,7 +273,14 @@ namespace pd_recepcion_ufs_2007
                     int.TryParse(sMillosnew, out Millos);
                     int.TryParse(sMillosold, out Millos_old);
                     Millos = Millos - Millos_old;
-                    if(((Millos - Millos_old)<0) && contando && (Millos == 99)) { cienMillos=true; }
+                    if(((Millos - Millos_old)<0) && contando && (Millos == 99)) {
+                        cienMillos=true;
+                        value_Millos++;
+                        textoR = "00000";
+                        textoR += value_Millos.ToString() + "00" + CMIL.Text + DMIL.Text + UMIL.Text + 
+                        CEN.Text + DEC.Text + UNI.Text;
+                        AMOUNT.Text = textoR;
+                    }
                     // --------------------
                 }
                 nbyte++;
